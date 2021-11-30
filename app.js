@@ -31,7 +31,21 @@ let voitures = {
     garage: 'concession',
     lieu: 'Fourmies',
     // Dans un tableau, ajouter les différentes voitures que vous possédez.
-    collection: [], // Vos voitures dans cette propriété !
+    collection: [
+        peugeot,
+        citroen,
+        ford
+    ], // Vos voitures dans cette propriété !
+}
+
+for (let i = 0; i < voitures.collection.length; i++) {
+    let para = document.getElementById("p");
+    let spanP = document.createElement("span");
+    spanP.innerHTML = voitures.collection[i].color + ", ";
+    voitures.collection[i].ouvrirPorte();
+
+    para.append(spanP);
+
 }
 
 // FIXME Parcourrez le tableau dans lequel vous avez placé vos objets.
